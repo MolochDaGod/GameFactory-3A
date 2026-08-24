@@ -32,7 +32,12 @@ import {
   A3GameRuntimeEntityComponent,
   A3GameEntityFactory,
   A3GameControllableEntity,
+  A3GameCombatResourceState,
+  A3GameElement,
+  A3GameElementalBendingCaster,
   bootA3GameRuntime,
+  A3GameLinearSpellCaster,
+  A3GameThirdPersonController,
   createContactShadow,
   createFillLight,
   createInstancedFromModel,
@@ -52,6 +57,27 @@ import {
   A3GAME_RUNTIME_FORWARD_AXIS,
 } from '@a3game/playable';
 ```
+
+## Reusable gameplay systems
+
+The framework now exposes opt-in gameplay helpers for projects that want
+shared controller and casting logic without rebuilding them from scratch:
+
+- `A3GameThirdPersonController` - camera-relative movement, jump, gravity,
+  and facing integration against `A3GameCollisionProbe` (or terrain height).
+- `A3GameLinearSpellCaster` - straight-line projectile casting with
+  sweep-based hit detection, pierce limits, expiry events, and optional
+  `combatResources` gating for cast costs.
+- `A3GameElementalBendingCaster` - elemental projectile casting with
+  direction bending (`rotateTowards`), per-element tuning (`fire`,
+  `water`, `air`, `earth`, `lightning`, `arcane`), and cast costs that
+  map to combat resources such as `mana`, `focus`, and `elementalCharge`.
+- `A3GameCombatResourceState` - a tiny resource pool for a game's combat
+  budget, including regen and affordability checks for spell casts.
+
+These systems are reusable building blocks. Game packages still own concrete
+rules, VFX, status effects, and presentation, while the resource model here
+keeps the cast layer predictable and testable.
 
 Deep imports into `src/` are not part of the contract. `three` is a peer
 dependency supplied by the host project.

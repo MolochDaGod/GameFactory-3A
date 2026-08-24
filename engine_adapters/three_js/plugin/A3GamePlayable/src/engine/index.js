@@ -59,6 +59,13 @@ export {
   retargetClipToSkeleton,
 } from './motion-kit.js';
 export {
+  A3GameCombatResourceState,
+  A3GameElement,
+  A3GameElementalBendingCaster,
+  A3GameLinearSpellCaster,
+  A3GameThirdPersonController,
+} from './gameplay-systems.js';
+export {
   A3GameBeamEffect,
   A3GameEmitterShape,
   A3GameParticleAppearance,
