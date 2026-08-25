@@ -218,6 +218,51 @@ Generated artifacts are organized by game, run, task kind, and task id under
 
 ---
 
+## Rapier Physics for Three.js
+
+This branch includes comprehensive production-grade Rapier physics integration documentation and skills for Three.js game development.
+
+### Rapier Physics Content
+
+**Core Documentation:**
+- [`agent_skills/engine_context/rapier_physics_fundamentals.md`](agent_skills/engine_context/rapier_physics_fundamentals.md) - Complete Rapier physics concepts (worlds, bodies, colliders, forces, joints, constraints)
+- [`agent_skills/engine_context/rapier_threejs_integration.md`](agent_skills/engine_context/rapier_threejs_integration.md) - Integration architecture with entity systems and 5 production patterns
+- [`agent_skills/engine_context/rapier_api_reference.md`](agent_skills/engine_context/rapier_api_reference.md) - Complete ThreeClient physics API documentation
+
+**Gameplay Implementation:**
+- [`agent_skills/code_gen/mechanic/rapier_gameplay_patterns.md`](agent_skills/code_gen/mechanic/rapier_gameplay_patterns.md) - 7 production-ready patterns with complete code examples
+
+**Production Optimization:**
+- [`agent_skills/engine_context/rapier_performance_guide.md`](agent_skills/engine_context/rapier_performance_guide.md) - 6 optimization strategies for desktop and mobile
+- [`agent_skills/engine_context/rapier_advanced_techniques.md`](agent_skills/engine_context/rapier_advanced_techniques.md) - Advanced topics (motors, networking, soft bodies, debugging)
+
+**Asset Quality:**
+- [`agent_skills/asset_qa/physics_asset_qa.md`](agent_skills/asset_qa/physics_asset_qa.md) - QA procedures for physics-ready 3D assets with checklists
+
+**Navigation:**
+- [`agent_skills/RAPIER_ROUTING.md`](agent_skills/RAPIER_ROUTING.md) - Master index with learning paths and task-based routing
+- [`RAPIER_PRODUCTION_CONTENT.md`](RAPIER_PRODUCTION_CONTENT.md) - Overview of all Rapier content
+
+### Quick Start with Rapier
+
+```text
+1. Start with RAPIER_ROUTING.md for navigation based on your experience level
+2. Beginners: Follow the fundamental → integration → gameplay patterns path (~4 hours)
+3. Experienced developers: Jump to specific topics via the routing guide
+4. QA teams: Use physics_asset_qa.md for asset validation procedures
+```
+
+### Content Highlights
+
+✓ **Comprehensive** - Beginner to advanced expert coverage
+✓ **Practical** - 50+ ready-to-adapt code examples
+✓ **Production-Ready** - Based on real game development patterns
+✓ **Performance-Focused** - Optimization for 50-1000+ physics bodies
+✓ **Asset-Integrated** - QA procedures for physics-ready 3D assets
+✓ **Platform-Optimized** - Desktop and mobile tuning guidance
+
+---
+
 ## Join Our Community
 
 Welcome to our WeChat group! Feel free to join us for project discussions, development support, and feedback.
